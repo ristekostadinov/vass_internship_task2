@@ -16,7 +16,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> findAll() {
-        return List.of();
+        return this.employeeRepository.findAll();
     }
 
     @Override
@@ -26,16 +26,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee save(Employee employee) {
-        return null;
+        return this.employeeRepository.save(employee);
     }
 
     @Override
     public Employee update(Employee employee) {
-        return null;
+        return this.employeeRepository.save(employee);
     }
 
     @Override
     public void delete(Long id) {
-
+        this.employeeRepository.deleteById(id);
     }
 }
